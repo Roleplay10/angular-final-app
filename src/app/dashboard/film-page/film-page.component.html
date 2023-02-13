@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="form">
+    <input nz-input placeholder="Title" [(ngModel)]="filmTitle" />
+    <input nz-input placeholder="Director" [(ngModel)]="filmDirector" />
+    <input nz-input placeholder="Length" [(ngModel)]="filmLength" />
+    <input nz-input placeholder="Rating" [(ngModel)]="filmRating" />
+    <input nz-input placeholder="Release Date" [(ngModel)]="filmReleaseDate" />
+    <button nz-button nzType="primary" (click)="editFilm()">Save</button>
+    <button class="delete-btn" nz-button nzType="primary" nzDanger (click)="deleteFilm()">Delete</button>
+  </div>
+</div>

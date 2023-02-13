@@ -1,0 +1,28 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "title": "Avengers: Infinity War",
+      "director": "Anthony Russo",
+      "length": "149",
+      "rating": "8.4",
+      "releaseDate": "2018"
+    },
+    {
+      "id": 4,
+      "title": "Avengers: Endgame",
+      "director": "Anthony Russo",
+      "length": "181",
+      "rating": "8.4",
+      "releaseDate": "2019"
+    },
+    {
+      "id": 5,
+      "title": "Captain America: The Winter Soldier",
+      "director": "Anthony Russo",
+      "length": "136",
+      "rating": "7.8",
+      "releaseDate": "2014"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="block">
+    <div class="form">
+      <input nz-input placeholder="Title" [(ngModel)]="filmTitle" />
+      <input nz-input placeholder="Director" [(ngModel)]="filmDirector" />
+      <input nz-input placeholder="Length" [(ngModel)]="filmLength" />
+      <input nz-input placeholder="Rating" [(ngModel)]="filmRating" />
+      <input nz-input placeholder="Release Date" [(ngModel)]="filmReleaseDate" />
+      <button nz-button nzType="primary" (click)="addNewFilm()">Add</button>
+    </div>
+      <button nz-button nzType="primary" (click)="sortList('title')">Sort by Title</button>
+      <button nz-button nzType="primary" (click)="sortList('length')">Sort by length</button>
+      <button nz-button nzType="primary" (click)="sortList('rating')">Sort by rating</button>
+      <button nz-button nzType="primary" (click)="sortList('releaseDate')">Sort by release date</button>
+
+    <div class="films">
+      <app-film-card
+        *ngFor="let film of filmList"
+        [film]="film"
+        (clickedMore)="navigateToFilmPage(film)"
+      ></app-film-card>
+    </div>
+  </div>
+</div>

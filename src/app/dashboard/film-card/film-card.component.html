@@ -1,0 +1,9 @@
+<nz-card style="width: 300px" [nzTitle]="film.title" [nzExtra]="extraTemplate">
+   <p>Director: {{film.director}}</p>
+   <p>Length: {{film.length}} minutes</p>
+   <p>Rating: {{film.rating}}/10</p>
+   <p>Release Date: {{film.releaseDate}}</p>
+ </nz-card>
+ <ng-template #extraTemplate>
+  <button nz-button nzType="default" (click)="navigateToFilmPage()">More</button>
+</ng-template>

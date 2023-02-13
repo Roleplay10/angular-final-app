@@ -1,0 +1,58 @@
+<div class="container">
+
+  <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="register()">
+      <h3>Register</h3>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Name is missing">
+          <nz-input-group nzPrefixIcon="user">
+            <input nz-input type="text" placeholder="Name" [formControl]="name" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Incorrect email format">
+          <nz-input-group nzPrefixIcon="mail">
+            <input type="text" nz-input formControlName="email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Password min.lengh is 6!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="password" placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control [nzErrorTip]="errorTpl">
+          <nz-input-group nzPrefixIcon="lock">
+            <input nz-input type="password" formControlName="checkPassword" id="checkPassword" placeholder="Confirm Password" />
+            <ng-template #errorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Please confirm your password!</ng-container>
+              <ng-container *ngIf="control.hasError('confirm')">
+                Passwords does not match
+              </ng-container>
+            </ng-template>
+          </nz-input-group>
+
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Phone number should have minimum 7 digits">
+          <nz-input-group nzPrefixIcon="phone">
+            <input nz-input type="tel" placeholder="Phone number" formControlName="tel"/>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <br>
+      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">R E G I S T E R !</button>
+      <p *ngIf="showError" nz-typography nzType="danger">Registration failed!</p>
+
+    </form>
+
+</div>

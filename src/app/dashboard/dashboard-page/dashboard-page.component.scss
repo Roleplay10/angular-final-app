@@ -1,0 +1,32 @@
+.films{
+  display: grid;
+  gap: 20px;
+  width: 300px;
+  float: left;
+}
+
+.form {
+  display: grid;
+  grid-column: auto;
+  margin: 15px;
+  width: 300px;
+  height: 250px;
+  float: left;
+
+}
+.block{
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+button{
+  margin: 5px;
+}
+
